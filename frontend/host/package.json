@@ -1,0 +1,21 @@
+{
+  "name": "host",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "rspack serve --config rspack.config.js",
+    "build": "rspack build --config rspack.config.js --mode production"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.23.0",
+    "shared-ui": "*"
+  },
+  "devDependencies": {
+    "@rspack/cli": "^1.0.0",
+    "@rspack/core": "^1.0.0",
+    "css-loader": "^6.10.0",
+    "style-loader": "^3.3.4"
+  }
+}

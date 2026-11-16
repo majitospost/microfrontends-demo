@@ -1,0 +1,22 @@
+{
+  "name": "microfrontends-demo",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "shared-ui",
+    "host",
+    "mfe-news",
+    "mfe-hr",
+    "mfe-reports"
+  ],
+  "scripts": {
+    "start:host": "npm run start -w host",
+    "start:news": "npm run start -w mfe-news",
+    "start:hr": "npm run start -w mfe-hr",
+    "start:reports": "npm run start -w mfe-reports",
+    "start:all": "concurrently -n host,news,hr,reports -c blue,green,yellow,magenta \"npm run start:news\" \"npm run start:hr\" \"npm run start:reports\" \"npm run start:host\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
